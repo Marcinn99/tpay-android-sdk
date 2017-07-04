@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tpay_toolbar_title">#FFFFFF</color>
+    <color name="tpay_toolbar">#34449F</color>
+
+    <color name="tpay_payButtonEnabled">#34449F</color>
+    <color name="tpay_payButtonDisabled">#d9d9d9</color>
+    <color name="tpay_payButtonPressed">#262d7c</color>
+
+</resources>

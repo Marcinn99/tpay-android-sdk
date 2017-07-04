@@ -1,0 +1,14 @@
+<resources>
+    <string name="tpay_app_name">TpayAndroidLibrary</string>
+    <string name="tpay">tpay.com</string>
+    <string name="tpay_payment_in_progress">Payment in progress</string>
+    <string name="tpay_want_to_enter_blik_code">I want to enter the BLIK code</string>
+    <string name="tpay_pay_for">Pay for:</string>
+    <string name="tpay_amount">Amount:</string>
+    <string name="tpay_choose">I choose</string>
+    <string name="tpay_type_blik_code">Enter the BLIK code:</string>
+    <string name="tpay_pay">Pay</string>
+    <string name="tpay_make_payment_without_blik">Make a payment in this app without entering the BLIK code</string>
+    <string name="tpay_make_payment_with_blik">Make a payment with the BLIK code</string>
+    <string name="tpay_blik_payment">BLIK Payment</string>
+</resources>
