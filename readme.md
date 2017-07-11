@@ -1,4 +1,4 @@
-### Transferuj Android Mobile Library
+### Tpay Android Mobile Library
 Biblioteka mobilna przygotowana dla systemu Android.
 
 ### Konfiguracja projektu
@@ -61,7 +61,7 @@ paymentBuilder = savedInstanceState
 ```
 
 - Po utworzeniu obiektu reprezentującego płatność należy ustawić wymagane paramatry zgodnie z
-dokumentacją znajdującą się na stronie transferuj.pl ([dokumentacja](https://secure.transferuj.pl/partner/pliki/dokumentacja.pdf)). Przykładowe ustawienia parametrów:
+dokumentacją znajdującą się na stronie tpay.com ([dokumentacja](https://secure.tpay.com/partner/pliki/dokumentacja.pdf)). Przykładowe ustawienia parametrów:
 ```
 if (savedInstanceState == null) {
 paymentBuilder = new TpayPayment.Builder()
@@ -78,7 +78,7 @@ paymentBuilder = savedInstanceState
 }
 ```
 
-- Zamiast podawania parametrów "security code" i "crc", można podać parametr "md5 code", który wygenerować można zgodnie z [dokumentacją](https://secure.transferuj.pl/partner/pliki/dokumentacja.pdf)):
+- Zamiast podawania parametrów "security code" i "crc", można podać parametr "md5 code", który wygenerować można zgodnie z [dokumentacją](https://secure.tpay.com/partner/pliki/dokumentacja.pdf)):
 
 ```    
 paymentBuilder = new TpayPayment.Builder()
@@ -147,9 +147,9 @@ TpayBlikTransaction transaction = new TpayBlikTransactionBuilder()
 .build();
 ```
 
-Hasło do api (parametr *api_password*) jest polem obowiązkowym - w [dokumentacji API ](https://secure.tpay.com/partner/pliki/api-transaction.pdf) na stronie 2. można znaleźć więcej szczegółów.  Pozostałe parametry opisane są w [dokumentacji ogólnej](https://secure.transferuj.pl/partner/pliki/dokumentacja.pdf). 
+Hasło do api (parametr *api_password*) jest polem obowiązkowym - w [dokumentacji API ](https://secure.tpay.com/partner/pliki/api-transaction.pdf) na stronie 2. można znaleźć więcej szczegółów.  Pozostałe parametry opisane są w [dokumentacji ogólnej](https://secure.tpay.com/partner/pliki/dokumentacja.pdf). 
 
-Zamiast podawania parametrów *security code* i *crc*, można podać parametr *md5 code*, który wygenerować można zgodnie z [dokumentacją](https://secure.transferuj.pl/partner/pliki/dokumentacja.pdf).
+Zamiast podawania parametrów *security code* i *crc*, można podać parametr *md5 code*, który wygenerować można zgodnie z [dokumentacją](https://secure.tpay.com/partner/pliki/dokumentacja.pdf).
 
 W przypadku transakcji BLIK bez możliwości rejestracji aliasu (czyli bez możliwości skorzystania z One Click) dodanie aliasu BLIK jest opcjonalne. W przypadku transakcji dla zarejestrowanego aliasu, bądź chęci rejestracji aliasu należy podać przynajmniej jeden alias za pomocą metody *addBlikAlias()*. 
 
