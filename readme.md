@@ -392,7 +392,7 @@ super.onActivityResult(requestCode, resultCode, data);
 }
 ```
 ### How to use the library in the project - BLIK and BLIK OneClick payments
-### The use of default views
+#### The use of default views
 The library allows you to quickly use BLIK and BLIK One Click payments using the ready, default payment views.
 
 In the first step, create an object representing the BLIK transaction using the prepared builder:
