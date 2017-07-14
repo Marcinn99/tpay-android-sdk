@@ -1,4 +1,4 @@
-[English Version](https://github.com/tpay-com/Android-SDK/blob/master/readme.md#English-Version)
+[English Version](https://github.com/tpay-com/Android-SDK/blob/master/readme.md#english-version)
 
 ### Tpay Android Mobile Library
 Biblioteka mobilna przygotowana dla systemu Android.
