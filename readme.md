@@ -63,7 +63,7 @@ paymentBuilder = savedInstanceState
 ```
 
 - Po utworzeniu obiektu reprezentującego płatność należy ustawić wymagane paramatry zgodnie z
-dokumentacją znajdującą się na stronie tpay.com ([dokumentacja](https://secure.tpay.com/partner/pliki/dokumentacja.pdf)). Przykładowe ustawienia parametrów:
+ ([dokumentacją](https://docs.tpay.com/#!/Tpay/tpay_no_api)). Przykładowe ustawienia parametrów:
 ```
 if (savedInstanceState == null) {
 paymentBuilder = new TpayPayment.Builder()
@@ -80,7 +80,7 @@ paymentBuilder = savedInstanceState
 }
 ```
 
-- Zamiast podawania parametrów "security code" i "crc", można podać parametr "md5 code", który wygenerować można zgodnie z [dokumentacją](https://secure.tpay.com/partner/pliki/dokumentacja.pdf)):
+- Zamiast podawania parametrów "security code" i "crc", można podać parametr "md5 code", który wygenerować można zgodnie z [dokumentacją](https://docs.tpay.com/#!/Tpay/tpay_no_api)):
 
 ```    
 paymentBuilder = new TpayPayment.Builder()
@@ -149,9 +149,9 @@ TpayBlikTransaction transaction = new TpayBlikTransactionBuilder()
 .build();
 ```
 
-Hasło do api (parametr *api_password*) jest polem obowiązkowym - w [dokumentacji API ](https://secure.tpay.com/partner/pliki/api-transaction.pdf) na stronie 2. można znaleźć więcej szczegółów.  Pozostałe parametry opisane są w [dokumentacji ogólnej](https://secure.tpay.com/partner/pliki/dokumentacja.pdf). 
+Hasło do api (parametr *api_password*) jest polem obowiązkowym - w [dokumentacji API ](https://docs.tpay.com/#!/Transaction_API/post_api_gw_api_key_transaction_create) .
 
-Zamiast podawania parametrów *security code* i *crc*, można podać parametr *md5 code*, który wygenerować można zgodnie z [dokumentacją](https://secure.tpay.com/partner/pliki/dokumentacja.pdf).
+Zamiast podawania parametrów *security code* i *crc*, można podać parametr *md5 code*, który wygenerować można zgodnie z [dokumentacją](https://docs.tpay.com/#!/Tpay/tpay_no_api).
 
 W przypadku transakcji BLIK bez możliwości rejestracji aliasu (czyli bez możliwości skorzystania z One Click) dodanie aliasu BLIK jest opcjonalne. W przypadku transakcji dla zarejestrowanego aliasu, bądź chęci rejestracji aliasu należy podać przynajmniej jeden alias za pomocą metody *addBlikAlias()*. 
 
@@ -160,7 +160,7 @@ Metoda *addBlikAlias()* przyjmuje parametry:
 - label: etykieta aliasu, pole opcjonalne, typ String
 - key: numer aplikacji, pole opcjonalne, typ String.
 
-Więcej informacji na temat poszczególnych parametrów zawarto w [dokumentacji API ](https://secure.tpay.com/partner/pliki/api-transaction.pdf) na stronie 7.
+Więcej informacji na temat poszczególnych parametrów zawarto w [dokumentacji API BLIK](https://docs.tpay.com/#!/Transaction_API/post_api_gw_api_key_transaction_blik) .
 
 Jeden alias BLIK może być zarejestrowany do wielu aplikacji bankowych, co powoduje niejednoznaczność aliasu - domyślny widok płatności obsługuje tę sytuację wyświetlając stosowny widok wyboru.
 
@@ -268,7 +268,7 @@ public void onResponseFailure(Throwable t) {
 });
 ```
 
-Szczegóły związane z odpowiedziami API oraz kodami błędów znajdują się w [dokumentacji API ](https://secure.tpay.com/partner/pliki/api-transaction.pdf) na stronach 6-13.
+Szczegóły związane z odpowiedziami API oraz kodami błędów znajdują się w [dokumentacji API ](https://docs.tpay.com/#!/Tpay/tpay_transaction_error_codes) .
 
 Historia zmian
 --------------
@@ -334,7 +334,7 @@ paymentBuilder = savedInstanceState
 .getParcelable(TpayActivity.EXTRA_TPAY_PAYMENT);
 }
 ```
-- After creating a payment object, set the required parameters according to the documentation on tpay.com (documentation). Sample parameter settings:
+- After creating a payment object, set the required parameters according to the ([documentation](https://docs.tpay.com/#!/Tpay/tpay_no_api)). Sample parameter settings:
 ```
 if (savedInstanceState == null) {
 paymentBuilder = new TpayPayment.Builder()
@@ -351,7 +351,7 @@ paymentBuilder = savedInstanceState
 }
 ```
 
-- Instead of providing "security code" and "crc" parameters, you can specify "md5 code", which can be generated according to the documentation):
+- Instead of providing "security code" and "crc" parameters, you can specify "md5 code", which can be generated according to the ([documentation](https://docs.tpay.com/#!/Tpay/tpay_no_api)):
 ```
 paymentBuilder = new TpayPayment.Builder()
 .setMd5Code("generated_code_MD5")
@@ -410,7 +410,8 @@ TpayBlikTransaction transaction = new TpayBlikTransactionBuilder()
 .build();
 ```
 
-The api password (api_password parameter) is a mandatory field - see API documentation on page 2 for more details. Other parameters are described in the general documentation.
+The api password (api_password parameter) is a mandatory field - see ([API documentation](https://docs.tpay.com/#!/Transaction_API/post_api_gw_api_key_transaction_create)) for more details.
+
 Instead of providing security code and crc parameters, you can specify the md5 code parameter that can be generated according to the documentation.
 
 In the case of BLIK transactions without the ability to register an alias (ie without the ability to use One Click), adding a BLIK alias is optional. In the case of transactions for a registered alias or wanting to register an alias, you must specify at least one alias using the addBlikAlias() method.
@@ -420,7 +421,7 @@ The *addBlikAlias()* method takes the following parameters:
 - label: alias label, optional field, String type
 - key: application number, optional field, String type.
 
-For more information on individual parameters, see the API documentation on page 7.
+For more information on individual parameters, see the ([API BLIK documentation](https://docs.tpay.com/#!/Transaction_API/post_api_gw_api_key_transaction_blik)).
 
 One BLIK alias can be registered to multiple banking applications, resulting in alias ambiguity - the default payment view handles this situation by displaying the corresponding selection view.
 
@@ -519,7 +520,7 @@ public void onResponseFailure(Throwable t) {
 });
 ```
 
-Details regarding API responses and error codes can be found in the API documentation on pages 6-13.
+Details regarding API responses and error codes can be found in the ([documentation](https://docs.tpay.com/#!/Tpay/tpay_transaction_error_codes))
 
 History of changes
 ------------------
